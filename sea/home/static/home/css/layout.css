@@ -55,6 +55,7 @@
 
     .right_nav {
         padding-top: 0.35rem;
+        margin-right: 7.9rem;
     }
 
     #dropd {
@@ -78,6 +79,59 @@
         .right_nav a {
             margin-right: 1rem;
         }
+
+        .cta a{
+            margin-left: -1rem;
+            padding-left: -1rem;
+        }
+        .right_nav {
+            padding-top: 0.35rem;
+            margin-right: 7rem;
+        }
+        .ctad{
+            position: absolute;
+            top: 1.1rem;
+            right: 2rem;
+            background-color: #BBDAF7;
+            width: 5.75rem;
+            height: 3rem;
+            width: auto;
+            justify-content: center;
+            align-items: center;
+            padding-top: 0.7rem;
+        
+            padding-left: 0.94rem;
+            border-radius: 4px;
+            
+        }
+        .ctad a{
+            margin-left: 0rem;
+            padding-left: 0.3rem;
+
+        }
+    
     }
 
+
+
+.cta {
+    position: absolute;
+    top: 1.1rem;
+    right: 2rem;
+    background-color: #BBDAF7;
+    width: 5.75rem;
+    height: 3rem;
+    width: auto;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0.7rem;
+
+    padding-left: 0.94rem;
+    border-radius: 4px;
     
+}
+
+.cta a{
+    margin-left: 0.4rem;
+    padding-left: 0.3rem;
+}
