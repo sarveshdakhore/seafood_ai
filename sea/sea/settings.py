@@ -39,8 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     #register the app home in django
     'home',
-    
-    
+    'chatbot',
 ]
 
 MIDDLEWARE = [

@@ -1,0 +1,32 @@
+{% extends 'home/layout/layout.html' %}
+{% block title %}
+{% if title %}
+AI | Chatbot
+{% else %}
+food
+{% endif %}
+{% endblock title %}
+{% block head %}
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'chatbot/css/chatbot.css' %}">
+
+
+{% endblock head %}
+{% block body %}
+{% csrf_token %}
+
+<div class="container">
+    <section>
+        <article></article>
+        <article></article>
+    </section>
+
+
+    <section>
+        <article></article>
+        <article></article>
+    </section>
+</div>
+
+{% endblock body %}
