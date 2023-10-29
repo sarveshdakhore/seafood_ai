@@ -1,3 +1,11 @@
 Given is the link to view the final UI design of the Seafood.ai Website (inclusive of color and font assets)
 
 https://www.figma.com/file/z9fbQQRIpNmmvBxjfYM5Qk/Lehar_final_UI?type=design&node-id=0%3A1&mode=design&t=un6ctuEpyXcdsxjp-1
+
+
+Color Hexcodes :
+F9F3EF - Cream Main
+F5E9E1 - Cream Dark (highlights)
+FFA0B1 - Salmon Pink (accent 1)
+BBDAF7 - Sea Blue (accent 2)
+000000 - Black (text)
