@@ -19,22 +19,11 @@ food
 <div class="container_p">
     <section class="container_c">
         <article id='msgbox'>
-            <div class='promt' style='display: flex; flex-direction: row; '>
-                <div class='left_msg' style='width: 18%; display: flex; justify-content: center; padding-top: 32px;'>
-                </div>
-                <div class="right_msg" style="margin-right: 12%; padding-top: 2.5%;">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem dicta nesciunt quo optio amet
-                        nostrum illum excepturi animi dolore rerum ab minus atque, veritatis quibusdam, ducimus cumque
-                        laboriosam, ipsa cupiditate!</p>
-                </div>
-            </div>
             <div class="reply" style="display: flex; flex-direction: row;">
                 <div class="left_msg" style="width: 18%; display: flex; justify-content: center; padding-top: 32px;">
                 </div>
                 <div class="right_msg" style="margin-right: 12%; padding-top: 2.5%;">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem dicta nesciunt quo optio amet
-                        nostrum illum excepturi animi dolore rerum ab minus atque, veritatis quibusdam, ducimus cumque
-                        laboriosam, ipsa cupiditate!</p>
+                    <p>Write your promt to get help!!!</p>
                 </div>
             </div>
         </article>
@@ -74,7 +63,7 @@ food
             if (event.key === "Enter") {
                 event.preventDefault();
                 sendMessage();
-                scrollDown()
+                
             }
         });
 
@@ -93,6 +82,7 @@ food
                     console.log("Message sent successfully");
                     messageInput.val("");
                     $("#msgbox").append("<div class='reply' style='display: flex; flex-direction: row;'><div class='left_msg' style='width: 18%; display: flex; justify-content: center; padding-top: 32px;'></div><div class='right_msg' style='margin-right: 12%; padding-top: 2.5%;'><p>" + response.reply + "</p></div></div>");
+                    scrollDown();
                 },
                 error: function(xhr, status, error) {
                     console.error("Error sending message:", error);
