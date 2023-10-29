@@ -19,8 +19,8 @@ food
 <div class="container_p">
     <section class="container_c">
         <article id='msgbox'>
-            <div class="promt" style="display: flex; flex-direction: row; ">
-                <div class="left_msg" style="width: 18%; display: flex; justify-content: center; padding-top: 32px;">
+            <div class='promt' style='display: flex; flex-direction: row; '>
+                <div class='left_msg' style='width: 18%; display: flex; justify-content: center; padding-top: 32px;'>
                 </div>
                 <div class="right_msg" style="margin-right: 12%; padding-top: 2.5%;">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem dicta nesciunt quo optio amet
@@ -60,22 +60,49 @@ food
 
 {% block script %}
 
-<script>
-    const messageInput = document.getElementById("message-input");
 
-    messageInput.addEventListener("keydown", function (event) {
-        if (event.key === "Enter") {
-            event.preventDefault();
-            sendMessage();
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    function scrollDown() {
+        var msgbox = document.getElementById("msgbox");
+        msgbox.scrollTop = msgbox.scrollHeight;
+    }
+    $(document).ready(function() {
+        const messageInput = $("#message-input");
+
+        messageInput.on("keydown", function(event) {
+            if (event.key === "Enter") {
+                event.preventDefault();
+                sendMessage();
+                scrollDown()
+            }
+        });
+
+        function sendMessage() {
+            const message = messageInput.val();
+            $("#msgbox").append("<div class='promt' style='display: flex; flex-direction: row; '> <div class='left_msg' style='width: 18%; display: flex; justify-content: center; padding-top: 32px;'> </div> <div class='right_msg' style='margin-right: 12%; padding-top: 2.5%;'><p>" + message + "</p></div> </div>");
+            $.ajax({
+                url: "{% url 'send_message' %}",
+                type: "POST",
+
+                data: {
+                    message: message,
+                    csrfmiddlewaretoken: "{{ csrf_token }}"
+                },
+                success: function(response) {
+                    console.log("Message sent successfully");
+                    messageInput.val("");
+                    $("#msgbox").append("<div class='reply' style='display: flex; flex-direction: row;'><div class='left_msg' style='width: 18%; display: flex; justify-content: center; padding-top: 32px;'></div><div class='right_msg' style='margin-right: 12%; padding-top: 2.5%;'><p>" + response.reply + "</p></div></div>");
+                },
+                error: function(xhr, status, error) {
+                    console.error("Error sending message:", error);
+                }
+            });
         }
     });
-
-    function sendMessage() {
-        const message = messageInput.value;
-        // TODO: Send the message to the server and display the response
-        console.log("Sending message:", message);
-        messageInput.value = "";
-    }
 </script>
+
+
+
 
 {% endblock script %}
