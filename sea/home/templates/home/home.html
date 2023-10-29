@@ -17,19 +17,20 @@ SeaFood
 {% csrf_token %}
 <br><br><br>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<section class="photo"></section>
+<section class="photo">
+    <img src="\static\1.png" alt="" srcset="">
+</section>
 <section class="content">
     <div class="heading">
-        <h1>Changing the future of some more subtext here.</h1>
+        <h1>Your Gateway to Fresh, Delicious Seafood.</h1>
     </div>
     <div class="tb">
         <div class="text">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo id, quasi autem magni sed fugit nisi
-                eum odio ipsa molestias aspernatur laboriosam vero, eos modi fugiat, rem architecto molestiae dolorem?
+            <p>Got questions about seafood? Our expert chatbot is here to provide you with all the answers and information you need.
             </p>
         </div>
         <div class="button">
-            <a href="#">Get Access</a>
+            <a href="{% url 'chatbot'%}">Get Access</a>
         </div>
     </div>
 </section>
@@ -39,31 +40,23 @@ SeaFood
     </div>
     <div class="rc">
         <div class="rc_child_column">
-            <img src="/static/hello.jpeg" alt="hi" srcset="">
+            <img src="/static/2.png" alt="hi" srcset="">
             <div>
-                <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas vitae labore a! Eum sapiente
-                    dignissimos, nam earum tempora provident voluptate possimus qui blanditiis reiciendis aut nobis quos
-                    nihil cupiditate minus.</h2>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi cum minima quas similique laborum
-                    dolor incidunt. Saepe ab minus aspernatur quaerat optio ea mollitia libero, in odio nostrum,
-                    doloremque accusamus?</p>
+                <h2>Fostering a Seafood Legacy through Excellence and Innovation.</h2>
+                <p>At Leher, we celebrate the ocean's bounty, nurture seafood excellence, and bring you remarkable culinary experiences.</p>
             </div>
         </div>
         <div class="rc_child_column_reverse">
-            <img src="/static/hello.jpeg" alt="hello" srcset="">
+            <img src="/static/3.png" alt="hello" srcset="">
             <div>
-                <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi dolore labore, et dolores maxime
-                    laboriosam amet. Eos voluptates labore nemo modi, excepturi cum. Quas sequi voluptate quibusdam qui
-                    eos? Omnis?</h2>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur ut ipsam, corrupti dolore delectus
-                    numquam blanditiis sequi quam, voluptatum, consequatur voluptas amet tempore! Nam amet pariatur illo
-                    facere earum non.</p>
+                <h2>Your Seafood information hub.</h2>
+                <p>From product details including freshness, quality, and preparation tips, to comprehensive trade guidelines that keep you informed about industry standards, sustainability practices, and more, our platform is your go-to source for all things seafood.</p>
             </div>
         </div>
     </div>
     </div>
 </section>
-<footer></footer>
+<footer class="footer" style="display: flex; justify-content: center;">Embarking on a journey of excellence, we're here to redefine the world of seafood, offering unparalleled quality.</footer>
 
 {% endblock body %}
 
