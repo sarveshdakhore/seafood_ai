@@ -13,5 +13,3 @@ def audio_to_text(audio_file_path, lang):
         audio_data = rec.record(source)
     user_input_raw = rec.recognize_wit(audio_data, key=wit_api_key)
     return user_input_raw
-
-print(audio_to_text('WhatsApp-Audio-2023-10-29-at-02.46.25_2de32284.waptt.wav', 'tel'))
