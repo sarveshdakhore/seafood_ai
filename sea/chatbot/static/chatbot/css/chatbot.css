@@ -1,0 +1,34 @@
+.container_c {
+    position: absolute;
+    top: 5rem; /* adjust this value to match the height of your navbar */
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 255, 255, 0);
+    display: flex;
+    flex-direction: column;
+}
+
+#msgbox {
+    height: 75%;
+    overflow-y: scroll;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+#msgbox div{
+    width: 100%;
+    padding: 1%;
+
+}
+.reply{
+    background: #F5E9E1;
+}
+#foot_msg {
+    height: 25%;
+    position: sticky;
+    bottom: 0;
+    background-color: bisque;
+}
+

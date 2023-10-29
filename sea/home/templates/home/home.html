@@ -6,11 +6,68 @@ SeaFood AI | {{title}}
 SeaFood
 {% endif %}
 {% endblock title %}
+{% block head %}
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'home/css/home.css' %}">
+
+
+{% endblock head %}
 {% block body %}
 {% csrf_token %}
 <br><br><br>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<section class="photo"></section>
+<section class="content">
+    <div class="heading">
+        <h1>Changing the future of some more subtext here.</h1>
+    </div>
+    <div class="tb">
+        <div class="text">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo id, quasi autem magni sed fugit nisi
+                eum odio ipsa molestias aspernatur laboriosam vero, eos modi fugiat, rem architecto molestiae dolorem?
+            </p>
+        </div>
+        <div class="button">
+            <a href="#">Get Access</a>
+        </div>
+    </div>
+</section>
+<section class="photo-1">
+    <div class="heading">
+        <h1>Our Mission</h1>
+    </div>
+    <div class="rc">
+        <div class="rc_child_column">
+            <img src="/static/hello.jpeg" alt="hi" srcset="">
+            <div>
+                <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas vitae labore a! Eum sapiente
+                    dignissimos, nam earum tempora provident voluptate possimus qui blanditiis reiciendis aut nobis quos
+                    nihil cupiditate minus.</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi cum minima quas similique laborum
+                    dolor incidunt. Saepe ab minus aspernatur quaerat optio ea mollitia libero, in odio nostrum,
+                    doloremque accusamus?</p>
+            </div>
+        </div>
+        <div class="rc_child_column_reverse">
+            <img src="/static/hello.jpeg" alt="hello" srcset="">
+            <div>
+                <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi dolore labore, et dolores maxime
+                    laboriosam amet. Eos voluptates labore nemo modi, excepturi cum. Quas sequi voluptate quibusdam qui
+                    eos? Omnis?</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur ut ipsam, corrupti dolore delectus
+                    numquam blanditiis sequi quam, voluptatum, consequatur voluptas amet tempore! Nam amet pariatur illo
+                    facere earum non.</p>
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
+<footer></footer>
 
-
-
-<h1 style="color: rgb(189, 120, 37);">&ensp;home</h1>
 {% endblock body %}
+
+{% block script %}
+
+
+{% endblock script %}

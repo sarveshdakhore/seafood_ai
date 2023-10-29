@@ -15,18 +15,67 @@ food
 {% endblock head %}
 {% block body %}
 {% csrf_token %}
+<br><br><br><br><br>
+<div class="container_p">
+    <section class="container_c">
+        <article id='msgbox'>
+            <div class="promt" style="display: flex; flex-direction: row; ">
+                <div class="left_msg" style="width: 18%; display: flex; justify-content: center; padding-top: 32px;">
+                </div>
+                <div class="right_msg" style="margin-right: 12%; padding-top: 2.5%;">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem dicta nesciunt quo optio amet
+                        nostrum illum excepturi animi dolore rerum ab minus atque, veritatis quibusdam, ducimus cumque
+                        laboriosam, ipsa cupiditate!</p>
+                </div>
+            </div>
+            <div class="reply" style="display: flex; flex-direction: row;">
+                <div class="left_msg" style="width: 18%; display: flex; justify-content: center; padding-top: 32px;">
+                </div>
+                <div class="right_msg" style="margin-right: 12%; padding-top: 2.5%;">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem dicta nesciunt quo optio amet
+                        nostrum illum excepturi animi dolore rerum ab minus atque, veritatis quibusdam, ducimus cumque
+                        laboriosam, ipsa cupiditate!</p>
+                </div>
+            </div>
+        </article>
 
-<div class="container">
-    <section>
-        <article></article>
-        <article></article>
-    </section>
+        <article id="foot_msg" style="padding-top: 2%;">
+            <!-- FILEPATH: /Users/sarveshdakhore/Mirror/Mirror/lol/seafood_ai/sea/chatbot/templates/chatbot/chatbot.html -->
 
 
-    <section>
-        <article></article>
-        <article></article>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 offset-md-2">
+                        <div class="input-group mb-3">
+                            <textarea id="message-input" class="form-control"
+                                placeholder="Type your message here"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
     </section>
 </div>
-
 {% endblock body %}
+
+{% block script %}
+
+<script>
+    const messageInput = document.getElementById("message-input");
+
+    messageInput.addEventListener("keydown", function (event) {
+        if (event.key === "Enter") {
+            event.preventDefault();
+            sendMessage();
+        }
+    });
+
+    function sendMessage() {
+        const message = messageInput.value;
+        // TODO: Send the message to the server and display the response
+        console.log("Sending message:", message);
+        messageInput.value = "";
+    }
+</script>
+
+{% endblock script %}
