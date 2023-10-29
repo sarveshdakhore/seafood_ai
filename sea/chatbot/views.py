@@ -13,7 +13,7 @@ def message_handle(request):
     if request.method == 'POST':
         message = request.POST.get('message')
         print(message)
-        response_data = {'reply': 'Hello, World!'}
+        response_data = {'reply': 'The generated promt will be send to this location we need to only integrate it, all ther things are already ready'}
         return JsonResponse(response_data)
     else:
         return render(request, 'chatbot/chatbot.html')
